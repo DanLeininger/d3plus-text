@@ -1626,7 +1626,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           var t = _this2._text(d, i);
 
           if (t === void 0) return arr;
-          console.log('no trim'); // t = trim(t);
+          console.log('no trim', t); // t = trim(t);
 
           var resize = _this2._fontResize(d, i);
 

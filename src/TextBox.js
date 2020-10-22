@@ -89,7 +89,7 @@ export default class TextBox extends BaseClass {
 
       let t = this._text(d, i);
       if (t === void 0) return arr;
-      console.log('no trim')
+      console.log('no trim', t)
       // t = trim(t);
 
       const resize = this._fontResize(d, i);
