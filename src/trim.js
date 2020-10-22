@@ -22,7 +22,7 @@ function trimLeft(str) {
     @param {String} str
 */
 function trimRight(str) {
-  return str.toString().replace(/\s+$/, "");
+  return str;
 }
 
 export {trim, trimLeft, trimRight};

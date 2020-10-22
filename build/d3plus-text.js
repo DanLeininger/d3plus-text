@@ -1200,7 +1200,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
   function trimRight(str) {
-    return str.toString().replace(/\s+$/, "");
+    return str;
   }
 
   var alpha = "abcdefghiABCDEFGHI_!@#$%^&*()_+1234567890",
@@ -1790,7 +1790,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
               @private
           */
           function textContent(text) {
-            console.log('bloop', text);
+            console.log('blap', text);
             text[that._html ? "html" : "text"](function (t) {
               return trimRight(t);
             });

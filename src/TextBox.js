@@ -277,7 +277,7 @@ export default class TextBox extends BaseClass {
             @private
         */
         function textContent(text) {
-          console.log('bloop', text)
+          console.log('blap', text)
           text
             [that._html ? "html" : "text"](t => trimRight(t));
         }
