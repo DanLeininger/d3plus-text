@@ -14827,8 +14827,10 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
               @private
           */
           function textContent(text) {
-            console.log('blup', text);
-            return text;
+            console.log('bloop', text);
+            text[that._html ? "html" : "text"](function (t) {
+              return trimRight(t);
+            });
           }
           /**
               Styles to apply to each <text> element.

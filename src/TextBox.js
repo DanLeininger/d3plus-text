@@ -277,21 +277,9 @@ export default class TextBox extends BaseClass {
             @private
         */
         function textContent(text) {
-          console.log('blup', text)
-
-          return text;
-
+          console.log('bloop', text)
           text
-            [that._html ? "html" : "text"](t => trimRight(t)
-              .replace(/&([^\;&]*)/g, (str, a) => a === "amp" ? str : `&amp;${a}`) // replaces all non-HTML ampersands with escaped entity
-              .replace(/<([^A-z^/]+)/g, (str, a) => `&lt;${a}`).replace(/<$/g, "&lt;") // replaces all non-HTML left angle brackets with escaped entity
-              .replace(/(<[^>^\/]+>)([^<^>]+)$/g, (str, a, b) => `${a}${b}${a.replace("<", "</")}`) // ands end tag to lines before mid-HTML break
-              .replace(/^([^<^>]+)(<\/[^>]+>)/g, (str, a, b) => `${b.replace("</", "<")}${a}${b}`) // ands start tag to lines after mid-HTML break
-              .replace(/<([A-z]+)[^>]*>([^<^>]+)<\/[^>]+>/g, (str, a, b) => {
-                const tag = that._html[a] ? `<tspan style="${that._html[a]}">` : "";
-                return `${tag.length ? tag : ""}${b}${tag.length ? "</tspan>" : ""}`;
-              }));
-
+            [that._html ? "html" : "text"](t => trimRight(t));
         }
 
         /**
