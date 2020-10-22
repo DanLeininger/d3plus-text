@@ -154,6 +154,7 @@ export default class TextBox extends BaseClass {
         }
 
         wrapResults = wrapper(t);
+        console.log('wrapResults', wrapResults)
         lineData = wrapResults.lines.filter(l => l !== "");
         line = lineData.length;
 
