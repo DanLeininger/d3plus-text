@@ -14870,7 +14870,8 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
           update.on(events[e], on[events[e]]);
         }
 
-        if (callback) setTimeout(callback, this._duration + 100);
+        console.log('wrapResults2', wrapResults);
+        if (callback) setTimeout(callback(wrapResults), this._duration + 100);
         return this;
       }
       /**
