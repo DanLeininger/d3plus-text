@@ -14656,6 +14656,8 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
       value: function render(callback) {
         var _this4 = this;
 
+        var _lineData;
+
         if (this._select === void 0) this.select(_select("body").append("svg").style("width", "".concat(window.innerWidth, "px")).style("height", "".concat(window.innerHeight, "px")).node());
         var that = this;
 
@@ -14717,6 +14719,7 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
             lineData = wrapResults.lines.filter(function (l) {
               return l !== "";
             });
+            _lineData = lineData;
             line = lineData.length;
 
             if (wrapResults.truncated) {
@@ -14870,8 +14873,8 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
           update.on(events[e], on[events[e]]);
         }
 
-        console.log('wrapResults2', wrapResults);
-        if (callback) setTimeout(callback(wrapResults), this._duration + 100);
+        console.log('_lineData', _lineData);
+        if (callback) setTimeout(callback(_lineData), this._duration + 100);
         return this;
       }
       /**

@@ -80,7 +80,7 @@ export default class TextBox extends BaseClass {
       @param {Function} [*callback* = undefined]
   */
   render(callback) {
-
+    let _lineData;
     if (this._select === void 0) this.select(select("body").append("svg").style("width", `${window.innerWidth}px`).style("height", `${window.innerHeight}px`).node());
 
     const that = this;
@@ -156,6 +156,7 @@ export default class TextBox extends BaseClass {
         wrapResults = wrapper(t);
         console.log('wrapResults', wrapResults)
         lineData = wrapResults.lines.filter(l => l !== "");
+        _lineData = lineData;
         line = lineData.length;
 
         if (wrapResults.truncated) {
@@ -360,8 +361,8 @@ export default class TextBox extends BaseClass {
             return obj;
           }, {});
     for (let e = 0; e < events.length; e++) update.on(events[e], on[events[e]]);
-    console.log('wrapResults2', wrapResults);
-    if (callback) setTimeout(callback(wrapResults), this._duration + 100);
+    console.log('_lineData', _lineData);
+    if (callback) setTimeout(callback(_lineData), this._duration + 100);
 
     return this;
 
