@@ -89,7 +89,8 @@ export default class TextBox extends BaseClass {
 
       let t = this._text(d, i);
       if (t === void 0) return arr;
-      t = trim(t);
+      console.log('no trim')
+      // t = trim(t);
 
       const resize = this._fontResize(d, i);
       const lHRatio = this._lineHeight(d, i) / this._fontSize(d, i);

@@ -2086,6 +2086,15 @@ d3plus-dev@^0.7.6:
     uglify-js "^3.10.3"
     zora "^4.0.0"
 
+"d3plus-text@https://github.com/DanLeininger/d3plus-text#c230c479a09f2b96f0f6de5f2d825b3abb2af928":
+  version "0.10.1"
+  resolved "https://github.com/DanLeininger/d3plus-text#c230c479a09f2b96f0f6de5f2d825b3abb2af928"
+  dependencies:
+    d3-array "^1.2.4"
+    d3-selection "^1.4.0"
+    d3-transition "^1.2.0"
+    d3plus-common "^0.7.0"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
