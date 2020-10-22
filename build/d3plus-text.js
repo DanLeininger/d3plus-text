@@ -1676,6 +1676,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
             }
 
             wrapResults = wrapper(t);
+            console.log('wrapResults', wrapResults);
             lineData = wrapResults.lines.filter(function (l) {
               return l !== "";
             });
@@ -1790,7 +1791,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
               @private
           */
           function textContent(text) {
-            console.log('blap', text);
+            console.log('booooo', text);
             text[that._html ? "html" : "text"](function (t) {
               return trimRight(t);
             });
