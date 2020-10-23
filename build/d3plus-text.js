@@ -1380,7 +1380,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     function textWrap(sentence) {
       sentence = stringify(sentence);
       if (lineHeight === void 0) lineHeight = Math.ceil(fontSize * 1.4);
+      console.log('sentence', sentence);
       var words = split(sentence);
+      console.log('words', words);
       var style = {
         "font-family": fontFamily,
         "font-size": fontSize,
@@ -1399,6 +1401,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         var word = words[i];
         var wordWidth = sizes[words.indexOf(word)];
         word += sentence.slice(textProg.length + word.length).match("^( |\n)*", "g")[0];
+        console.log('after word', word);
 
         if (textProg.slice(-1) === "\n" || widthProg + wordWidth > width) {
           if (!i && !overflow) {
@@ -1423,6 +1426,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         widthProg += word.match(/[\s]*$/g)[0].length * space;
       }
 
+      console.log('snetence2', sentence);
       return {
         lines: lineData,
         sentence: sentence,
